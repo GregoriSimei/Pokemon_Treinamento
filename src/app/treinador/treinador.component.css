@@ -1,27 +1,33 @@
-/* Editando Página normal */
-img{
+.lista_treinadores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
     position: relative;
-    width: 100px;
-    height: 100px;
-    display: block;
 }
-h2{
-    text-align: center;
+.card_itens{
+    
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: auto;
+    align-items: center;
 }
-.pokemons{
+.card_itens img{
+    height: 200px;
+}
+
+/* Cartas de Pokemons  ======================================= */
+.pokemons_treinadores{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.pokemons ul {
     list-style-type: none;
 }
-.pokemons li{
-    list-style-type: none;
-    margin: 5px;
-    width: 200px;
-    height: 100%;
-    transition: 1s;
+
+/* cada carta */
+.cada_carta{
+    margin: 10px auto;
 }
 .img_text_pok{
     border: nome;
@@ -31,10 +37,12 @@ h2{
     align-items: center;
     align-content: space-around;
     border-radius: 10px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px 1px white;
     transition: 1s;
 }
 .img_text_pok:hover{
-    border-bottom: chartreuse;
+    box-shadow: 10px black;
 }
 .img_text_pok div > div {
     display: flex;
@@ -48,18 +56,24 @@ h2{
     margin : 0px;
     width: 20%;
 }
+.pokemons ul {
+    list-style-type: none;
+}
+
+
 div > button{
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
-    color: rgb(109, 109, 109);
-    border: none;
+    background-color: rgb(109, 184, 33);
+    color: white;
+    border-style: solid 1px;
+    border-color: white;
     cursor: pointer;
     transition: 0.5s;
 }
 div > button:hover{
-    background-color: rgb(128, 255, 0);
-    color: white;
+    background-color: rgb(81, 161, 1);
 }
 progress {
     border: none;
@@ -75,9 +89,20 @@ progress.defence::-webkit-progress-value {
 progress.life::-webkit-progress-value {
     background: rgb(15, 240, 53);
 }
+img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
 
 
-/* Tipos de pokemons */
+.nome_treinador{
+    font-size: 50px;
+    color: white;
+}
+
+/* Tipos de Pokemons */
 
 .grass{
     background: radial-gradient(circle at bottom, rgb(26, 145, 22) 30%, rgba(75,255,62,1) 30%, rgba(75,255,62,1) 40%, rgba(107,255,93,1) 40%, rgba(107,255,93,1) 46%, rgba(203,255,203,1) 46%, rgba(203,255,203,1) 55%, rgba(255,255,255,1) 55%);

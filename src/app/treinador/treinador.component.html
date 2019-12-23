@@ -1,0 +1,21 @@
+<ul class="lista_treinadores">
+  <li *ngFor="let treinador of treinadores">
+    <div class="card_itens">
+      <img src="assets/img_treinadores/{{treinador.id}}.png">
+      <p class="nome_treinador">{{treinador.nome}}</p>
+    </div>
+    <ul class="pokemons_treinadores">
+      <li *ngFor="let pokemon of treinador.meusPokemons" class="cada_carta">
+        <div class="img_text_pok {{pokemon.type}}">
+          <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/{{pokemon.img}}.png"/>
+          {{pokemon.name}}
+          <div class="info_pokemon">
+            <div><p>A </p><progress value="{{pokemon.attack}}" max="700" class="atack"></progress><p>{{pokemon.attack}}</p></div>
+            <div><p>D </p><progress value="{{pokemon.defence}}" max="800" class="defence"></progress><p>{{pokemon.defence}}</p></div>
+            <div><p>HP </p><progress value="{{pokemon.life}}" max="{{pokemon.life}}" class="life"></progress><p>{{pokemon.life}}</p></div>
+          </div>
+        </div>
+      </li>
+    </ul> 
+  </li>
+</ul>

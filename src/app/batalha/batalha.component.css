@@ -1,27 +1,33 @@
-/* Editando Página normal */
-img{
+.lista_treinadores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
     position: relative;
-    width: 100px;
-    height: 100px;
-    display: block;
 }
-h2{
-    text-align: center;
+.card_itens{
+    
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: auto;
+    align-items: center;
 }
-.pokemons{
+.card_itens img{
+    height: 200px;
+}
+
+/* Cartas de Pokemons  ======================================= */
+.pokemons_treinadores{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.pokemons ul {
     list-style-type: none;
 }
-.pokemons li{
-    list-style-type: none;
-    margin: 5px;
-    width: 200px;
-    height: 100%;
-    transition: 1s;
+
+/* cada carta */
+.cada_carta{
+    margin: 10px auto;
 }
 .img_text_pok{
     border: nome;
@@ -34,7 +40,9 @@ h2{
     transition: 1s;
 }
 .img_text_pok:hover{
-    border-bottom: chartreuse;
+    background: linear-gradient(217deg, rgba(20, 240, 222, 0.8), rgba(20, 240, 130, 0) 70.71%),
+                linear-gradient(127deg, rgba(0, 174, 255, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0, 3, 161, 0.842), rgba(0, 161, 22,0) 70.71%);
 }
 .img_text_pok div > div {
     display: flex;
@@ -48,18 +56,24 @@ h2{
     margin : 0px;
     width: 20%;
 }
+.pokemons ul {
+    list-style-type: none;
+}
+
+
 div > button{
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
-    color: rgb(109, 109, 109);
-    border: none;
+    background-color: rgb(109, 184, 33);
+    color: white;
+    border-style: solid 1px;
+    border-color: white;
     cursor: pointer;
     transition: 0.5s;
 }
 div > button:hover{
-    background-color: rgb(128, 255, 0);
-    color: white;
+    background-color: rgb(81, 161, 1);
 }
 progress {
     border: none;
@@ -75,10 +89,56 @@ progress.defence::-webkit-progress-value {
 progress.life::-webkit-progress-value {
     background: rgb(15, 240, 53);
 }
+img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+/* Batalha =================================== */
+.batalha{
+    background-color: rgba(255, 255, 255, 0.842);
+    border-radius: 5px;
+}
+#logo{
+    position: relative;
+    left: 38%;
+    width: 250px;
+    margin: 30px;
+    top: 15px;
+}
+.batalha_itens{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-top: solid;
+    border-color: rgba(0, 0, 0, 0.623);
+    border-radius: 0px 0px 5px 5px;
+    justify-content: space-around;
+    padding: 30px;
+    height: 220px;
+
+}
+.batalha_itens > div{
+    display: flex;
+    flex-direction: column;
+}
+.batalha_itens div div div > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.batalha_itens div div div p {
+    margin : 0px;
+    width: 20%;
+}
+.img_text_pok_batalha{
+    align-items: center;
+}
 
 
-/* Tipos de pokemons */
-
+/* Tipos */
 .grass{
     background: radial-gradient(circle at bottom, rgb(26, 145, 22) 30%, rgba(75,255,62,1) 30%, rgba(75,255,62,1) 40%, rgba(107,255,93,1) 40%, rgba(107,255,93,1) 46%, rgba(203,255,203,1) 46%, rgba(203,255,203,1) 55%, rgba(255,255,255,1) 55%);
 } 

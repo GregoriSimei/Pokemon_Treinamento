@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    /*background-image: url("assets/background.jfif");
+    background-image: url("assets/background2.jfif");
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    /*background-color: rgba(104, 104, 104, 0.45);*/
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS45YGxDFxkuXiCC3LsS_M1cwG_bDhnFFTZZ0VxlxKWlX4m0zyo") ;
+
+}

@@ -12,3 +12,28 @@
   <app-root></app-root>
 </body>
 </html>
+<script>
+  function entrar()
+  {
+      if(document.getElementById('name_treinador').value == "")
+      {
+        document.getElementById('pokebola').style.transition = "all 1s";
+        document.getElementById('pokebola').style.borderRadius = "25px";
+        document.getElementById('pokebola').style.background = "linear-gradient(to bottom, rgba(245,76,54,1) 0%, rgba(245,76,54,1) 20%,rgb(54, 54, 54) 21%, rgb(54, 54, 54) 21%, rgb(255, 255, 255) 21%, rgb(255, 255, 255) 100%)";
+        document.getElementById('tlt_treinador').style.display = "inline";
+        document.getElementById('name_treinador').style.display = "inline";
+        document.getElementById('btn_entrar_treinador').style.borderRadius = "5px";
+        document.getElementById('btn_entrar_treinador').style.width = "70px";
+        document.getElementById('btn_entrar_treinador').style.height = "30px";
+        document.getElementById('btn_entrar_treinador').style.border = "none";
+        document.getElementById('btn_entrar_treinador').style.background = "rgba(245,76,54,1)";
+        document.getElementById('btn_entrar_treinador').style.color = "white";
+        document.getElementById('logo').style.display = "flex";
+      }
+      else
+      {
+        document.getElementById('pokebola').style.display = "none";
+        document.getElementById('nav_pokemon').style.display = "inline";
+      }
+  }
+  </script>

@@ -1,3 +1,21 @@
-<p>
-  pokemons works!
-</p>
+<form>
+  <label>Name :</label>
+  <input type="text" placeholder="Coloque nome verdadeiro de um pokemon" (change)="this.name = $event.target.value">
+  <button (click)="getPokemonAPI()">Enviar</button>
+</form>
+
+<ul class="pokemons">
+   <li *ngFor="let pokemon of pokemons" id="{{pokemon.id}}">
+    <div class="img_text_pok {{pokemon.type}}">
+      <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/{{pokemon.img}}.png"/>
+      {{pokemon.name | uppercase}}
+      <div class="info_pokemon">
+        <div><p>A </p><progress value="{{pokemon.attack}}" max="200" class="atack"></progress><p>{{pokemon.attack}}</p></div>
+        <div><p>D </p><progress value="{{pokemon.defence}}" max="200" class="defence"></progress><p>{{pokemon.defence}}</p></div>
+        <div><p>HP </p><progress value="{{pokemon.life}}" max="{{pokemon.life}}" class="life"></progress><p>{{pokemon.life}}</p></div>
+      </div>
+      {{pokemon.type | uppercase}}
+      <button (click)="onSeletPokemon(pokemon)">Editar</button>
+    </div>
+  </li> 
+</ul>
