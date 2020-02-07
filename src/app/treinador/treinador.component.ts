@@ -13,7 +13,7 @@ export class TreinadorComponent implements OnInit {
 
   treinadores: Treinador[];
   
-  selectedPokemon: Pokemojrtgiro;
+  selectedPokemon: Pokemon;
   selectedPokemon2: Pokemon;
   activeDefence1 = false;
   activeDefence2 = false; 
