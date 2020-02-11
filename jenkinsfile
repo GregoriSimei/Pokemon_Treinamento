@@ -1,34 +1,33 @@
-pipeline{
+pipeline
+{
 
     agent any
 
     stages 
     {
-
-            stage('Install') 
+        stage('Install') 
+        {
+            steps
             {
-                steps
-                {
-                    sh 'npm install'
-                }
+                sh 'npm install'
+                sh 'blebla'
             }
+        }
 
-            stage('Build')
+        stage('Build')
+        {
+            steps 
             {
-                steps 
-                {
-                    sh 'ng build --prod'
-                }
+                sh 'ng build --prod'
             }
+        }
 
-            stage('Deployment')
+        stage('Deployment')
+        {
+            steps
             {
-                steps
-                {
-                    sh 'echo oi'
-                }
+                sh 'echo oi'
             }
-    
+        }
     }
-
 }
