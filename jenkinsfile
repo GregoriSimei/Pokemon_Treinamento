@@ -1,0 +1,14 @@
+pipeline
+{
+
+    stage('Install') 
+    {
+        sh 'npm install'
+    }
+
+    stage('Build')
+    {
+        sh 'ng build --prod'
+    }
+
+}
