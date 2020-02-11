@@ -5,24 +5,17 @@ pipeline
 
     stages 
     {
-        stage('Install') 
-        {
-            steps
-            {
-                sh 'npm install'
-                sh 'blebla'
-            }
-        }
 
-        stage('Build')
+        stage('Build Angular Project')
         {
             steps 
             {
+                sh 'npm install'
                 sh 'ng build --prod'
             }
         }
 
-        stage('Deployment')
+        stage('Deployment a Zip')
         {
             steps
             {
