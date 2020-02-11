@@ -1,14 +1,23 @@
 pipeline
 {
-
-    stage('Install') 
+    stages
     {
-        sh 'npm install'
-    }
+ 
+        stage('Install') 
+        {
+            sh 'npm install'
+        }
 
-    stage('Build')
-    {
-        sh 'ng build --prod'
+        stage('Build')
+        {
+            sh 'ng build --prod'
+        }
+
+        stage('Deployment')
+        {
+            sh 'echo oi'
+        }
+    
     }
 
 }
