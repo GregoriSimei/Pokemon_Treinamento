@@ -8,6 +8,7 @@ import { TreinadorComponent } from './treinador/treinador.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BatalhaComponent } from './batalha/batalha.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { BatalhaComponent } from './batalha/batalha.component';
     AppComponent,
     PokemonsComponent,
     TreinadorComponent,
-    BatalhaComponent
+    BatalhaComponent,
+    LoginComponent
   ],
   bootstrap: [ AppComponent ]
 })

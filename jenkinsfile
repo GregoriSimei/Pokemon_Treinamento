@@ -1,11 +1,9 @@
 pipeline
 {
-
     agent any
 
     stages 
     {
-
         stage('Build Angular Project')
         {
             steps 
@@ -15,7 +13,7 @@ pipeline
             }
         }
 
-        stage('Deployment a Zip')
+        stage('Deployment')
         {
             steps
             {

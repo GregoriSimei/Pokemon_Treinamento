@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pokemons</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div id="pokebola" class="pokebola">
+        <div class="items">
+            <div id="logo" class="logo"><img src="assets/logo.png"/></div>
+            <label id="tlt_treinador">Treinador</label>
+            <input id="name_treinador" type="text" placeholder="nome treinador" (change)="treinador.nome = $event.target.value">
+            <button id="btn_entrar_treinador" onclick="entrar()">Entrar</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+  function entrar()
+  {
+      if(document.getElementById('name_treinador').value == "")
+      {
+        document.getElementById('pokebola').style.transition = "all 1s";
+        document.getElementById('pokebola').style.borderRadius = "25px";
+        document.getElementById('pokebola').style.background = "linear-gradient(to bottom, rgba(245,76,54,1) 0%, rgba(245,76,54,1) 20%,rgb(54, 54, 54) 21%, rgb(54, 54, 54) 21%, rgb(255, 255, 255) 21%, rgb(255, 255, 255) 100%)";
+        document.getElementById('tlt_treinador').style.display = "inline";
+        document.getElementById('name_treinador').style.display = "inline";
+        document.getElementById('btn_entrar_treinador').style.borderRadius = "5px";
+        document.getElementById('btn_entrar_treinador').style.width = "70px";
+        document.getElementById('btn_entrar_treinador').style.height = "30px";
+        document.getElementById('btn_entrar_treinador').style.border = "none";
+        document.getElementById('btn_entrar_treinador').style.background = "rgba(245,76,54,1)";
+        document.getElementById('btn_entrar_treinador').style.color = "white";
+        document.getElementById('logo').style.display = "flex";
+      }
+      else
+      {
+        document.getElementById('pokebola').style.display = "none";
+        document.getElementById('nav_pokemon').style.display = "inline";
+      }
+  }
+  </script>
