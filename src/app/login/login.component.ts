@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Treinador } from '../treinador';
+import { TREINADORES } from '../mock-treinador';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,10 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
   }
+
+  treinador : Treinador = TREINADORES[0];
 
 }

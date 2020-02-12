@@ -10,8 +10,6 @@ import { TREINADORES } from './mock-treinador';
 export class AppComponent 
 {
   
-  treinador : Treinador = TREINADORES[0];
-  
   title = 'Batalha de Pokemons';
 
 }

@@ -4,13 +4,4 @@
     <a routerLink="/treinador" >Treinador</a>
 </nav>
 
-<div id="pokebola" class="pokebola">
-    <div class="items">
-        <div id="logo" class="logo"><img src="assets/logo.png"/></div>
-        <label id="tlt_treinador">Treinador</label>
-        <input id="name_treinador" type="text" placeholder="nome treinador" (change)="treinador.nome = $event.target.value">
-        <button id="btn_entrar_treinador" onclick="entrar()">Entrar</button>
-    </div>
-</div>
-
 <router-outlet></router-outlet>
