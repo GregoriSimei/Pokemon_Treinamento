@@ -1,16 +1,24 @@
-node('ubuntu_server'){
-    stage('Build Angular Project'){
+ pipeline{
+    
+    agent { Label 'ubuntu_server'}
+
+    stages {
         
-        steps {
-            sh 'npm install'
-            sh 'ng build --prod'
+        stage('Build Angular Project'){
+            
+            steps {
+                sh 'npm install'
+                sh 'ng build --prod'
+            }
         }
+
+        stage('Deployment'){
+            
+            steps{
+                sh 'echo oi'
+            }
+        }
+
     }
 
-    stage('Deployment'){
-        
-        steps{
-            sh 'echo oi'
-        }
-    }
 }
