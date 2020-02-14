@@ -1,21 +1,16 @@
 node('ubuntu_server'){
-    
-    stages {
+    stage('Build Angular Project'){
         
-        stage('Build Angular Project'){
-            
-            steps {
-                sh 'npm install'
-                sh 'ng build --prod'
-            }
+        steps {
+            sh 'npm install'
+            sh 'ng build --prod'
         }
+    }
 
-        stage('Deployment'){
-            
-            steps{
-                sh 'echo oi'
-            }
+    stage('Deployment'){
+        
+        steps{
+            sh 'echo oi'
         }
-
     }
 }
