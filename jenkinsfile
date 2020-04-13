@@ -11,16 +11,15 @@
 	}
 
         stage('Build Angular Project'){
-	    agent { dockerfile { args '-v JENKINS_HOME:/home/node/app' } }
+	    agent { dockerfile { args "-v ${JENKINS_HOME}:/home/node/app" } }
             steps {
-		sh 'ng build --prod'
+		            sh 'ng build --prod'
             }
         }
 
         stage('Deployment'){
-            
              steps{
-                sh 'cp -r ./dist/pokemon /home/greg/gregori/siteAngular'
+                sh 'pwd'
             }
         }
 
