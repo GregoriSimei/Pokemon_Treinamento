@@ -11,7 +11,7 @@
 	}
 
         stage('Build Angular Project'){
-	    agent { dockerfile { args "-v ${pwd}:/home/node/app" } }
+	    agent { dockerfile { args "-v ${WORKSPACE}:/home/node/app" } }
             steps {
                 sh 'ls -l'
             }
